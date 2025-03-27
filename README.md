@@ -11,3 +11,4 @@ Application to manage cars and driver in TVDE platforms like Uber and Bolt in Po
 ## Contributors
 
 - Igor Couto - igorcouto@gmail.com
+- Breno Sousa - brenosousa.pt@gmail.com
