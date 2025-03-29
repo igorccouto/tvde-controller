@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("cars")
+@RestController()
 public class CarController {
   private final CarService service;
 
@@ -14,7 +14,7 @@ public class CarController {
     this.service = service;
   }
 
-  @GetMapping
+  @GetMapping("/cars")
   List<Car> all() {
     return this.service.all();
   }

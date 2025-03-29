@@ -1,7 +1,6 @@
 package com.tvdecontroller.api.models.entities;
 
 import com.tvdecontroller.api.models.enums.FuelType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -33,11 +32,11 @@ public class Car {
   private Integer seats;
   private FuelType fuel;
   private String color;
-  @Column(name = "car_value")
-  private Long value;
   private Integer monthOfFirstRegistration;
   private Integer yearOfFirstRegistration;
   private String vin;
   private String plate;
+  private Long purchasePrice;
   private LocalDate purchaseDate;
+  private Integer purchaseMileage;
 }
