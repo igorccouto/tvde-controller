@@ -1,9 +1,11 @@
 package com.tvdecontroller.api.models.entities;
 
 import com.tvdecontroller.api.models.enums.FuelType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
@@ -20,6 +22,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @EqualsAndHashCode
 @SuperBuilder
+@Table(name = "car")
 public class Car {
   @Id
   @GeneratedValue
@@ -30,6 +33,7 @@ public class Car {
   private Integer seats;
   private FuelType fuel;
   private String color;
+  @Column(name = "car_value")
   private Long value;
   private Integer monthOfFirstRegistration;
   private Integer yearOfFirstRegistration;
