@@ -1,6 +1,6 @@
-package com.tvdecontroller.repositories;
+package com.tvdecontroller.api.repositories;
 
-import com.tvdecontroller.models.entities.Car;
+import com.tvdecontroller.api.models.entities.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

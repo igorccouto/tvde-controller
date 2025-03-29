@@ -1,6 +1,6 @@
-package com.tvdecontroller.models.entities;
+package com.tvdecontroller.api.models.entities;
 
-import com.tvdecontroller.models.enums.FuelType;
+import com.tvdecontroller.api.models.enums.FuelType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

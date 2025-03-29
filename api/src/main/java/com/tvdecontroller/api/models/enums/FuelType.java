@@ -1,4 +1,4 @@
-package com.tvdecontroller.models.enums;
+package com.tvdecontroller.api.models.enums;
 
 public enum FuelType {
   ELETRIC, PETROL, DIESEL, NATURAL_GAS
