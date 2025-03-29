@@ -11,6 +11,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
@@ -18,6 +19,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@SuperBuilder
 public class Car {
   @Id
   @GeneratedValue
@@ -25,7 +27,7 @@ public class Car {
   @NotBlank
   private String brand;
   private String model;
-  private String seats;
+  private Integer seats;
   private FuelType fuel;
   private String color;
   private Long value;
