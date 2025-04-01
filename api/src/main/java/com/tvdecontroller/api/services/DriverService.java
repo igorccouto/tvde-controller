@@ -16,4 +16,8 @@ public class DriverService {
   public List<Driver> all() {
     return this.repository.findAll();
   }
+
+  public void deletedById(Long id) {
+    this.repository.deleteById(id);
+  }
 }
