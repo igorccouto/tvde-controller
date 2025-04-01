@@ -1,8 +1,10 @@
 package com.tvdecontroller.api.configuration;
 
 import com.tvdecontroller.api.models.entities.Car;
+import com.tvdecontroller.api.models.entities.Driver;
 import com.tvdecontroller.api.models.enums.FuelType;
 import com.tvdecontroller.api.repositories.CarRepository;
+import com.tvdecontroller.api.repositories.DriverRepository;
 import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +13,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class LoadFakeDatabase {
   @Bean
-  public CommandLineRunner initDatabase(CarRepository repository) {
+  public CommandLineRunner initDatabase(CarRepository repository,
+      DriverRepository driverRepository) {
     return args -> {
       Car mokka = Car.builder().brand("Opel").model("Mokka-e").color("green").fuel(FuelType.ELETRIC)
           .monthOfFirstRegistration(5).yearOfFirstRegistration(2021).seats(5).plate("VG87XR")
@@ -25,6 +28,18 @@ public class LoadFakeDatabase {
 
       repository.save(mokka);
       repository.save(zoe);
+
+      Driver elson = Driver.builder().name("Elson Pereira Silva")
+          .bithdate(LocalDate.of(2024, 11, 7)).driverLicenseNumber("98765678").nif("927474625")
+          .residentNumber("UYV65456787").tvdeLicenseNumber("97545/2019").build();
+
+      Driver samyra = Driver.builder().name("Samyra Bezerra Sousa do Couto")
+          .bithdate(LocalDate.of(1986, 2, 5)).driverLicenseNumber("23456543").nif("33762345")
+          .residentNumber("VFD34567").tvdeLicenseNumber("33335/2025").build();
+
+      driverRepository.save(elson);
+      driverRepository.save(samyra);
+
     };
   }
 }
